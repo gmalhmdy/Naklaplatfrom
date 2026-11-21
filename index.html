@@ -1,138 +1,408 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>نقلة | منصة نقل البضائع الذكية</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial;background:#f4f6fa;color:#17243b}
-header{background:#101d35;color:#fff;padding:22px 16px;text-align:center}
-.logo{font-size:36px;font-weight:bold;color:#d9b45b}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:Tahoma,Arial,sans-serif;
+ background:#f4f6fa;
+ color:#17243b;
+}
+header{
+ background:#101d35;
+ color:white;
+ padding:20px 15px;
+ text-align:center;
+}
+.logo{
+ font-size:38px;
+ font-weight:bold;
+ color:#d9b45b;
+}
 header p{margin:8px 0;color:#eee}
-nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:15px;background:#172944}
-nav a{color:white;text-decoration:none;font-size:14px}
-.hero{text-align:center;padding:55px 18px;background:linear-gradient(135deg,#14243e,#263f60);color:white}
-.hero h1{font-size:29px;margin:0 0 15px}
+nav{
+ display:flex;
+ justify-content:center;
+ gap:18px;
+ flex-wrap:wrap;
+ padding:15px;
+ background:#172944;
+}
+nav a{
+ color:white;
+ text-decoration:none;
+ font-size:14px;
+}
+nav a:hover{color:#d9b45b}
+.hero{
+ text-align:center;
+ padding:60px 18px;
+ background:linear-gradient(135deg,#14243e,#263f60);
+ color:white;
+}
+.hero h1{font-size:30px;margin:0 0 15px}
 .hero p{line-height:2}
-.btn{display:inline-block;background:#d9b45b;color:#15233b;padding:13px 25px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:12px}
-.container{max-width:1000px;margin:auto;padding:25px 16px}
-h2{text-align:center;color:#172944}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:white;padding:22px;border-radius:12px;box-shadow:0 3px 12px #00000010;text-align:center}
+.btn{
+ display:inline-block;
+ background:#d9b45b;
+ color:#15233b;
+ padding:13px 25px;
+ border-radius:7px;
+ text-decoration:none;
+ font-weight:bold;
+ margin-top:12px;
+}
+.container{
+ max-width:1050px;
+ margin:auto;
+ padding:30px 16px;
+}
+h2{
+ text-align:center;
+ color:#172944;
+ margin-bottom:25px;
+}
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:16px;
+}
+.card{
+ background:white;
+ padding:22px;
+ border-radius:12px;
+ box-shadow:0 3px 12px #00000010;
+ text-align:center;
+}
 .card h3{color:#bd9742}
-form{background:white;padding:22px;border-radius:12px;max-width:600px;margin:25px auto}
-input,select,textarea{width:100%;padding:13px;margin:9px 0;border:1px solid #ccd2dc;border-radius:7px;font-size:15px}
-button{width:100%;padding:14px;background:#172944;color:white;border:0;border-radius:7px;font-size:16px;cursor:pointer}
-.note{text-align:center;color:#657084;line-height:2}
-footer{background:#101d35;color:white;text-align:center;padding:25px;margin-top:35px}
+form{
+ background:white;
+ padding:22px;
+ border-radius:12px;
+ max-width:650px;
+ margin:25px auto;
+ box-shadow:0 3px 12px #00000010;
+}
+input,select,textarea{
+ width:100%;
+ padding:13px;
+ margin:9px 0;
+ border:1px solid #ccd2dc;
+ border-radius:7px;
+ font-size:15px;
+ font-family:inherit;
+}
+textarea{min-height:90px;resize:vertical}
+button{
+ width:100%;
+ padding:14px;
+ background:#172944;
+ color:white;
+ border:0;
+ border-radius:7px;
+ font-size:16px;
+ cursor:pointer;
+ font-family:inherit;
+}
+button:hover{background:#263f60}
+.note{
+ text-align:center;
+ color:#657084;
+ line-height:2;
+}
+.hidden{display:none}
+footer{
+ background:#101d35;
+ color:white;
+ text-align:center;
+ padding:25px;
+ margin-top:35px;
+ line-height:2;
+}
+.section-title{
+ color:#bd9742;
+ text-align:center;
+ margin:15px 0;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">نقلة</div>
-<p>منصة ذكية لنقل البضائع والشحن</p>
+ <div class="logo">نقلة</div>
+ <p>منصة ذكية لنقل البضائع والشحن</p>
 </header>
 
 <nav>
-<a href="#home">الرئيسية</a>
-<a href="#services">خدماتنا</a>
-<a href="#request">اطلب نقلة</a>
-<a href="#drivers">انضم كسائق</a>
-<a href="#about">عن المنصة</a>
+ <a href="#home">الرئيسية</a>
+ <a href="#services">خدماتنا</a>
+ <a href="#vehicles">المركبات</a>
+ <a href="#request">اطلب نقلة</a>
+ <a href="#drivers">انضم كسائق</a>
+ <a href="#about">عن نقلة</a>
 </nav>
 
 <section class="hero" id="home">
-<h1>بضاعتك في الطريق الصحيح</h1>
-<p>نربط أصحاب البضائع بوسائل النقل والشحن<br>
-بسهولة وشفافية وسرعة.</p>
-<a class="btn" href="#request">اطلب سيارة الآن</a>
+ <h1>بضاعتك في الطريق الصحيح</h1>
+ <p>
+  نربط أصحاب البضائع بالسائقين ومركبات النقل المناسبة
+  <br>
+  بسهولة وشفافية وسرعة.
+ </p>
+ <a class="btn" href="#request">اطلب سيارة الآن</a>
 </section>
 
 <section class="container" id="services">
-<h2>خدمات منصة نقلة</h2>
-<div class="cards">
-<div class="card">
-<h3>🚚 نقل البضائع</h3>
-<p>ربط أصحاب البضائع بالسائقين ومركبات النقل المناسبة.</p>
-</div>
-<div class="card">
-<h3>📦 طلبات الشحن</h3>
-<p>تسجيل طلبات النقل وتحديد مكان التحميل والتسليم.</p>
-</div>
-<div class="card">
-<h3>📍 متابعة الرحلات</h3>
-<p>متابعة حالة الطلب والتواصل مع خدمة العملاء.</p>
-</div>
-<div class="card">
-<h3>🤝 شبكة السائقين</h3>
-<p>فرصة للسائقين للانضمام واستقبال طلبات النقل.</p>
-</div>
-</div>
+ <h2>خدمات منصة نقلة</h2>
+
+ <div class="cards">
+  <div class="card">
+   <h3>🚚 نقل البضائع</h3>
+   <p>ربط أصحاب البضائع بالسائقين ومركبات النقل المناسبة.</p>
+  </div>
+
+  <div class="card">
+   <h3>📦 طلبات الشحن</h3>
+   <p>تسجيل بيانات الشحنة ومكان التحميل والتسليم.</p>
+  </div>
+
+  <div class="card">
+   <h3>❄️ النقل المبرد</h3>
+   <p>إمكانية طلب مركبات مبردة وتحديد درجة الحرارة المطلوبة للشحنة.</p>
+  </div>
+
+  <div class="card">
+   <h3>🤝 شبكة السائقين</h3>
+   <p>فرصة للسائقين للانضمام إلى شبكة نقلة واستقبال طلبات النقل.</p>
+  </div>
+ </div>
+</section>
+
+<section class="container" id="vehicles">
+ <h2>مركبات النقل المتاحة</h2>
+
+ <div class="cards">
+  <div class="card">
+   <h3>ربع نقل</h3>
+   <p>لنقل الشحنات والبضائع الصغيرة والمتوسطة.</p>
+  </div>
+
+  <div class="card">
+   <h3>نصف نقل</h3>
+   <p>لنقل البضائع ذات الأحجام المتوسطة.</p>
+  </div>
+
+  <div class="card">
+   <h3>فرداني</h3>
+   <p>لنقل الشحنات والأحمال المناسبة لهذه الفئة.</p>
+  </div>
+
+  <div class="card">
+   <h3>نقل ثقيل</h3>
+   <p>لنقل الأحمال الكبيرة والشحنات الثقيلة.</p>
+  </div>
+ </div>
+
+ <p class="note">
+  تتوفر خدمة النقل المبرد داخل فئات المركبات القادرة على التبريد
+  وفق درجة الحرارة المطلوبة للشحنة.
+ </p>
 </section>
 
 <section class="container" id="request">
-<h2>طلب نقل جديد</h2>
-<form onsubmit="sendRequest(event)">
-<input id="customer" placeholder="اسم صاحب البضاعة" required>
-<input id="phone" type="tel" placeholder="رقم الهاتف" required>
-<input id="pickup" placeholder="مكان تحميل البضاعة" required>
-<input id="delivery" placeholder="مكان تسليم البضاعة" required>
-<select id="vehicle" required>
-<option value="">اختر نوع السيارة</option>
-<option>ربع نقل</option>
-<option>نصف نقل</option>
-<option>جامبو</option>
-<option>دبابة</option>
-<option>وسيلة نقل أخرى</option>
-</select>
-<textarea id="details" placeholder="وصف البضاعة وأي تفاصيل إضافية"></textarea>
-<button type="submit">إرسال الطلب</button>
-<p class="note">سيتم تجهيز الطلب للتواصل مع فريق نقلة.</p>
-</form>
+ <h2>طلب نقل جديد</h2>
+
+ <form onsubmit="sendRequest(event)">
+
+  <h3 class="section-title">بيانات صاحب الشحنة</h3>
+
+  <input id="customer" placeholder="اسم صاحب البضاعة" required>
+
+  <input id="phone" type="tel" placeholder="رقم الهاتف" required>
+
+  <input id="pickup" placeholder="مكان تحميل البضاعة" required>
+
+  <input id="delivery" placeholder="مكان تسليم البضاعة" required>
+
+  <h3 class="section-title">بيانات الشحنة</h3>
+
+  <select id="vehicle" required>
+   <option value="">اختر نوع السيارة</option>
+   <option>ربع نقل</option>
+   <option>نصف نقل</option>
+   <option>فرداني</option>
+   <option>نقل ثقيل</option>
+  </select>
+
+  <select id="cooling" onchange="toggleTemperature()" required>
+   <option value="">هل تحتاج الشحنة إلى نقل مبرد؟</option>
+   <option value="نعم">نعم</option>
+   <option value="لا">لا</option>
+  </select>
+
+  <div id="temperatureBox" class="hidden">
+   <label>درجة الحرارة المطلوبة للشحنة:</label>
+   <input id="temperature" type="text"
+    placeholder="مثال: من 2 إلى 8 درجات مئوية">
+  </div>
+
+  <textarea id="details"
+   placeholder="وصف البضاعة والوزن وأي تفاصيل إضافية"></textarea>
+
+  <button type="submit">إرسال طلب النقل عبر واتساب</button>
+
+  <p class="note">
+   سيتم فتح واتساب لإرسال بيانات طلبك إلى فريق نقلة.
+  </p>
+
+ </form>
 </section>
 
 <section class="container" id="drivers">
-<h2>انضم إلى شبكة سائقي نقلة</h2>
-<p class="note">نرحب بأصحاب السيارات والسائقين الراغبين في العمل معنا.</p>
+ <h2>انضم إلى شبكة سائقي نقلة</h2>
+
+ <p class="note">
+  نرحب بأصحاب السيارات والسائقين الراغبين في العمل معنا.
+ </p>
+
+ <form onsubmit="sendDriver(event)">
+
+  <input id="driverName" placeholder="اسم السائق" required>
+
+  <input id="driverPhone" type="tel" placeholder="رقم الهاتف" required>
+
+  <select id="driverVehicle" required>
+   <option value="">اختر نوع السيارة</option>
+   <option>ربع نقل</option>
+   <option>نصف نقل</option>
+   <option>فرداني</option>
+   <option>نقل ثقيل</option>
+  </select>
+
+  <select id="driverCooling" required>
+   <option value="">هل السيارة مجهزة للتبريد؟</option>
+   <option>نعم</option>
+   <option>لا</option>
+  </select>
+
+  <input id="driverLocation" placeholder="المحافظة ومكان العمل" required>
+
+  <textarea id="driverDetails"
+   placeholder="بيانات إضافية عن السيارة أو السائق"></textarea>
+
+  <button type="submit">إرسال طلب الانضمام</button>
+
+ </form>
 </section>
 
 <section class="container" id="about">
-<h2>من نحن</h2>
-<p class="note">نقلة مشروع منصة رقمية تهدف إلى تطوير خدمات نقل البضائع، من خلال ربط أصحاب الشحنات بوسائل النقل المختلفة، وتنظيم الطلبات وتسهيل التواصل ومتابعة جودة الخدمة.</p>
+ <h2>من نحن</h2>
+
+ <p class="note">
+  نقلة منصة رقمية تهدف إلى تطوير خدمات نقل البضائع،
+  من خلال ربط أصحاب الشحنات بوسائل النقل المختلفة،
+  وتنظيم الطلبات وتسهيل التواصل ومتابعة جودة الخدمة.
+  <br>
+  نبدأ عملنا في محافظة المنوفية، ثم نتوسع إلى القليوبية والغربية.
+ </p>
 </section>
 
 <footer>
-<p>نقلة | Nakla</p>
-<p>منصة نقل البضائع والشحن</p>
-<p>قريباً في المنوفية ثم التوسع إلى المحافظات الأخرى</p>
+ <p><strong>نقلة | Nakla</strong></p>
+ <p>منصة نقل البضائع والشحن</p>
+ <p>للتواصل: 01094011509</p>
+ <p>نقلة — بضاعتك في الطريق الصحيح</p>
 </footer>
 
 <script>
-function sendRequest(e){
-e.preventDefault();
-const data={
-customer:document.getElementById('customer').value,
-phone:document.getElementById('phone').value,
-pickup:document.getElementById('pickup').value,
-delivery:document.getElementById('delivery').value,
-vehicle:document.getElementById('vehicle').value,
-details:document.getElementById('details').value
-};
-const message="طلب نقل جديد من منصة نقلة\n"+
-"الاسم: "+data.customer+"\n"+
-"الهاتف: "+data.phone+"\n"+
-"التحميل: "+data.pickup+"\n"+
-"التسليم: "+data.delivery+"\n"+
-"السيارة: "+data.vehicle+"\n"+
-"التفاصيل: "+data.details;
-window.location.href="https://wa.me/?text="+encodeURIComponent(message);
+
+const NAKLA_WHATSAPP = "201094011509";
+
+function toggleTemperature(){
+ const cooling = document.getElementById("cooling").value;
+ const box = document.getElementById("temperatureBox");
+ const temperature = document.getElementById("temperature");
+
+ if(cooling === "نعم"){
+  box.classList.remove("hidden");
+  temperature.required = true;
+ }else{
+  box.classList.add("hidden");
+  temperature.required = false;
+  temperature.value = "";
+ }
 }
+
+function sendRequest(e){
+ e.preventDefault();
+
+ const customer = document.getElementById("customer").value.trim();
+ const phone = document.getElementById("phone").value.trim();
+ const pickup = document.getElementById("pickup").value.trim();
+ const delivery = document.getElementById("delivery").value.trim();
+ const vehicle = document.getElementById("vehicle").value;
+ const cooling = document.getElementById("cooling").value;
+ const temperature = document.getElementById("temperature").value.trim();
+ const details = document.getElementById("details").value.trim();
+
+ if(cooling === "نعم" && !temperature){
+  alert("من فضلك حدد درجة الحرارة المطلوبة للشحنة.");
+  return;
+ }
+
+ const message =
+ "طلب نقل جديد من منصة نقلة\n\n" +
+ "اسم العميل: " + customer + "\n" +
+ "رقم الهاتف: " + phone + "\n" +
+ "مكان التحميل: " + pickup + "\n" +
+ "مكان التسليم: " + delivery + "\n" +
+ "نوع المركبة: " + vehicle + "\n" +
+ "النقل المبرد: " + cooling + "\n" +
+ "درجة الحرارة المطلوبة: " +
+ (cooling === "نعم" ? temperature : "غير مطلوب") + "\n" +
+ "تفاصيل الشحنة: " + details;
+
+ openWhatsApp(message);
+}
+
+function sendDriver(e){
+ e.preventDefault();
+
+ const name = document.getElementById("driverName").value.trim();
+ const phone = document.getElementById("driverPhone").value.trim();
+ const vehicle = document.getElementById("driverVehicle").value;
+ const cooling = document.getElementById("driverCooling").value;
+ const location = document.getElementById("driverLocation").value.trim();
+ const details = document.getElementById("driverDetails").value.trim();
+
+ const message =
+ "طلب انضمام سائق جديد إلى نقلة\n\n" +
+ "اسم السائق: " + name + "\n" +
+ "رقم الهاتف: " + phone + "\n" +
+ "نوع السيارة: " + vehicle + "\n" +
+ "السيارة مجهزة للتبريد: " + cooling + "\n" +
+ "مكان العمل: " + location + "\n" +
+ "تفاصيل إضافية: " + details;
+
+ openWhatsApp(message);
+}
+
+function openWhatsApp(message){
+ const url =
+ "https://wa.me/" + NAKLA_WHATSAPP +
+ "?text=" + encodeURIComponent(message);
+
+ window.open(url, "_blank");
+}
+
 </script>
 
 </body>
-</html>
-
+  </html>
